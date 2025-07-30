@@ -7,7 +7,7 @@
   ],
   "env": {
     "PAYLOAD_SECRET": "@payload-secret",
-    "CRON_SECRET": "@cron-secret", 
+    "CRON_SECRET": "@cron-secret",
     "PREVIEW_SECRET": "@preview-secret"
   }
 }
