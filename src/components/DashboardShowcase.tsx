@@ -1,6 +1,7 @@
 import React from 'react';
 
-const DashboardShowcase: React.FC = () => {
+
+const DashboardShowcase = () => {
   return (
     <section
       className="h-[85vh] bg-[url('/Frame.png')] bg-cover bg-center overflow-visible flex flex-col items-center justify-center relative"
@@ -23,6 +24,7 @@ const DashboardShowcase: React.FC = () => {
           <img
             src="/صفحة تفاصيل السيارة 1.png"
             alt="الحجوزات"
+          
             className="w-[50%]  rounded-2xl "
           />
 
@@ -30,6 +32,7 @@ const DashboardShowcase: React.FC = () => {
           <img
             src="/الحجوزات 1.png"
             alt="إدارة العقود"
+           
             className="w-[70%]  rounded-2xl"
           />
 
@@ -37,6 +40,7 @@ const DashboardShowcase: React.FC = () => {
           <img
             src="/إدارة العقود 1.png"
             alt="تفاصيل السيارة"
+      
             className="w-[50%]  rounded-2xl "
           />
         </div>

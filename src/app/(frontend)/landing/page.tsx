@@ -4,7 +4,7 @@ import configPromise from '@payload-config'
 import { ArabicHeroSection } from '@/components/ArabicHeroSection'
 import { AboutUsSection } from '@/components/AboutUsSection'
 import DashboardShowcase from '@/components/DashboardShowcase'
-
+import Image from 'next/image'
 async function getLatestPosts() {
   try {
     const payload = await getPayload({ config: configPromise })
@@ -34,11 +34,15 @@ export default async function LandingPage() {
         
         {/* Bottom Section with Dashboard Image - UNCHANGED */}
         <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[70%] z-30">
-          <img
+          <Image
             src="/main.png"
             alt="لوحة البيانات"
+            width={1200}
+            height={800}
             className="w-full drop-shadow-xl rounded-2xl"
+            priority
           />
+          
         </div>
       </div>
       

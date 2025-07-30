@@ -1,6 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 
-export const AboutUsSection: React.FC = () => {
+export function AboutUsSection() {
   return (
     <div className="px-4 pt-72" dir="rtl">
       <div className="mx-auto w-[85%] ">
@@ -39,9 +40,11 @@ export const AboutUsSection: React.FC = () => {
           
           {/* Image */}
           <div className="relative">
-            <img
+            <Image
               src="/who we are image.png"
               alt="من نحن - موتاريو"
+              width={600}
+              height={400}
               className="w-full h-auto shadow-2xl rounded-2xl "
             />
           </div>
