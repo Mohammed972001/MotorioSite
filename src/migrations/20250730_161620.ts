@@ -1,6 +1,6 @@
 import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-vercel-postgres'
 
-export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
+export async function up({ db }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
    CREATE TYPE "public"."enum_pages_blocks_stats_background_color" AS ENUM('white', 'gray');
   CREATE TYPE "public"."enum__pages_v_blocks_stats_background_color" AS ENUM('white', 'gray');
@@ -123,7 +123,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   CREATE INDEX "landing_page_cta_cta_background_image_idx" ON "landing_page" USING btree ("cta_background_image_id");`)
 }
 
-export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {
+export async function down({ db }: MigrateDownArgs): Promise<void> {
   await db.execute(sql`
    DROP TABLE "pages_blocks_stats_stats" CASCADE;
   DROP TABLE "pages_blocks_stats" CASCADE;
